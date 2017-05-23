@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="cn.zzuli.app.domain">
+
+    <class name="Position" table="app_position">
+        <id name="positionId" type="integer">
+        	<generator class="native" />
+        </id>
+        <property name="time" type="string" not-null="true" />
+        <property name="latitude" type="string" not-null="true" />
+        <property name="longitude" type="string" not-null="true" ></property>
+        
+        <!-- user属性，本类与User的多对一关系 -->
+        <many-to-one name="user" class="User" column="id"></many-to-one>
+    </class>
+
+</hibernate-mapping>

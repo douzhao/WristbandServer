@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="WristbandAppSystem"
+  id="myeclipse.1444466120338"
+  context-root="/WristbandAppSystem"
+  j2ee-spec="5.0"
+  archive="WristbandAppSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

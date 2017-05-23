@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 配置扩展名为action -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 配置主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 让OGNL中可以使用静态的方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default,json-default">
+
+        <action name="test" class="testAction">
+        	<result>/index.jsp</result>
+        </action>
+        
+        <action name="homeAction_*" class="homeAction" method="{1}">
+        	<result name="toIndex" >/WEB-INF/jsp/homeAction/index.jsp</result>
+        	<result name="loginUI" >/WEB-INF/jsp/homeAction/loginUI.jsp</result>
+        	<result name="PT" >/WEB-INF/jsp/homeAction/PT.jsp</result>
+        </action>
+        
+        <action name="locationAction_*" class="locationAction" method="{1}">
+        	<result name="success" type="json">
+        		<param name="root">result</param>
+        	</result>
+        </action>
+        
+        <action name="phyCondAction_*" class="phyCondAction" method="{1}">
+        	<result name="heartRateUI" >/WEB-INF/jsp/phyCondAction/heartRateUI.jsp</result>
+        	<result name="hinkingUI" >/WEB-INF/jsp/phyCondAction/hinkingUI.jsp</result>
+        	<result name="bloodPressureUI" >/WEB-INF/jsp/phyCondAction/bloodPressureUI.jsp</result>
+        	<result name="sleepUI" >/WEB-INF/jsp/phyCondAction/sleepUI.jsp</result>
+        </action>
+        
+        <action name="positionAction_*" class="positionAction" method="{1}">
+        	<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+        </action>
+        
+        <action name="traceReplayAction_*" class="traceReplayAction" method="{1}">
+        	<result name="traceReplayUI">/WEB-INF/jsp/traceReplayAction/traceReplayUI.jsp</result>
+        	<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+        </action>
+        
+        <action name="userAction_*" class="userAction" method="{1}">
+        	<result name="success" type="json">
+        		<param name="root">result</param>
+        	</result>
+        	<result name="tsuccess" type="json">
+        		<param name="root">list</param>
+        	</result>
+        	<result name="usersListUI">/WEB-INF/jsp/userAction/usersListUI.jsp</result>
+        	<result name="checkPersonInforUI">/WEB-INF/jsp/userAction/checkPersonInforUI.jsp</result>
+        	<result name="updatePasswordUI">/WEB-INF/jsp/userAction/updatePasswordUI.jsp</result>
+        </action>
+        
+    </package>
+    
+</struts>

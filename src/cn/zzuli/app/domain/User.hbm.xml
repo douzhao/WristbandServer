@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="cn.zzuli.app.domain">
+
+    <class name="User" table="app_user">
+        <id name="id">
+        	<generator class="native" />
+        </id>
+        <property name="userName" type="string" unique="true" />
+        <property name="loginName" type="string" unique="true" />
+        <property name="password" type="string" />
+        <property name="userSex" type="string" />
+        <property name="email" type="string" />
+        
+        <!-- area属性，本类与Area的多对一关系 -->
+        <many-to-one name="area" class="Area" column="areaId"></many-to-one>
+        
+        <!-- positions属性，本类与Position的一对多关系 -->
+        <set name="positions">
+        	<key column="id"></key>
+        	<one-to-many class="Position"/>
+        </set>
+        
+        <!-- phyCond属性，本类与PhyCond的一对多关系 -->
+    </class>
+
+</hibernate-mapping>

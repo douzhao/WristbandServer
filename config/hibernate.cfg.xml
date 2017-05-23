@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory name="foo">
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<mapping resource="cn/zzuli/app/domain/User.hbm.xml" />
+	<mapping resource="cn/zzuli/app/domain/Area.hbm.xml" />
+	<mapping resource="cn/zzuli/app/domain/Position.hbm.xml" />
+</session-factory>
+</hibernate-configuration>
