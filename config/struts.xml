@@ -32,6 +32,12 @@
         	</result>
         </action>
         
+         <action name="heartAction_*" class="heartAction" method="{1}">
+        	<result name="success" type="json">
+        		<param name="root">result</param>
+        	</result>
+        </action>
+        
         <action name="phyCondAction_*" class="phyCondAction" method="{1}">
         	<result name="heartRateUI" >/WEB-INF/jsp/phyCondAction/heartRateUI.jsp</result>
         	<result name="hinkingUI" >/WEB-INF/jsp/phyCondAction/hinkingUI.jsp</result>

@@ -9,5 +9,6 @@
 	<mapping resource="cn/zzuli/app/domain/User.hbm.xml" />
 	<mapping resource="cn/zzuli/app/domain/Area.hbm.xml" />
 	<mapping resource="cn/zzuli/app/domain/Position.hbm.xml" />
+	<mapping resource="cn/zzuli/app/domain/Heart.hbm.xml" />
 </session-factory>
 </hibernate-configuration>

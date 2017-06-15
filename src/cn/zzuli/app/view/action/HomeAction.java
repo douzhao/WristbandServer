@@ -2,10 +2,11 @@ package cn.zzuli.app.view.action;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-
+import java.util.List;
 import com.opensymphony.xwork2.ActionContext;
 
 import cn.zzuli.app.base.BaseAction;
+import cn.zzuli.app.domain.Heart;
 import cn.zzuli.app.domain.User;
 
 @Controller
@@ -13,6 +14,9 @@ import cn.zzuli.app.domain.User;
 public class HomeAction extends BaseAction<User> {
 	
 	public String login(){
+		List<Heart> heart= heartService.getByUserID(1);
+		System.out.println("\nresult num =\n"+heart.size());
+		System.out.println("\nresult num =\n"+heart.get(0).getFre());
 		User user = userService.getByLoginNameAndPassword(model.getLoginName(),model.getPassword());
 		if (user == null) {
 			addFieldError("login", "用户或密码不正确");

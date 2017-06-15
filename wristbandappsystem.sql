@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : xn
-Source Server Version : 50716
+Source Server         : mysql
+Source Server Version : 50554
 Source Host           : localhost:3306
 Source Database       : wristbandappsystem
 
 Target Server Type    : MYSQL
-Target Server Version : 50716
+Target Server Version : 50554
 File Encoding         : 65001
 
-Date: 2017-05-18 16:33:37
+Date: 2017-06-15 17:21:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3557,6 +3557,27 @@ INSERT INTO `app_area` VALUES ('810000', '3522', '香港特别行政区', null);
 INSERT INTO `app_area` VALUES ('820000', '3523', '澳门特别行政区', null);
 
 -- ----------------------------
+-- Table structure for app_heart
+-- ----------------------------
+DROP TABLE IF EXISTS `app_heart`;
+CREATE TABLE `app_heart` (
+  `heartId` int(11) NOT NULL,
+  `time` varchar(255) NOT NULL,
+  `fre` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  PRIMARY KEY (`heartId`),
+  KEY `FK6D30F0A8C23FDE4` (`id`),
+  CONSTRAINT `FK6D30F0A8C23FDE4` FOREIGN KEY (`id`) REFERENCES `app_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of app_heart
+-- ----------------------------
+INSERT INTO `app_heart` VALUES ('0', '20170713080000', '82', '1');
+INSERT INTO `app_heart` VALUES ('1', '20170413080000', '70', '1');
+INSERT INTO `app_heart` VALUES ('2', '20170313080000', '85', '1');
+
+-- ----------------------------
 -- Table structure for app_position
 -- ----------------------------
 DROP TABLE IF EXISTS `app_position`;
@@ -3605,3 +3626,4 @@ INSERT INTO `app_user` VALUES ('1', '123', '123', '123', '男', '123456', '11010
 INSERT INTO `app_user` VALUES ('2', '527实验室', '527', '527', '女', '12345678', '110102');
 INSERT INTO `app_user` VALUES ('3', '西瓜', 'xigua', 'xigua', null, null, null);
 INSERT INTO `app_user` VALUES ('4', '南瓜', 'nangua', 'nangua', null, null, null);
+SET FOREIGN_KEY_CHECKS=1;

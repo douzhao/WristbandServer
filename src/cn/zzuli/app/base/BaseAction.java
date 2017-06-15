@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import net.sf.json.JSONArray;
 
 import cn.zzuli.app.service.AreaService;
+import cn.zzuli.app.service.HeartService;
 import cn.zzuli.app.service.PositionService;
 import cn.zzuli.app.service.UserService;
 
@@ -17,6 +18,8 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 
 	@Resource
 	protected UserService userService;
+	@Resource
+	protected HeartService heartService;
 	@Resource
 	protected AreaService areaService;
 	@Resource
