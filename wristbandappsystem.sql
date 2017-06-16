@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50554
 File Encoding         : 65001
 
-Date: 2017-06-15 17:21:50
+Date: 2017-06-16 16:18:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3563,8 +3563,10 @@ DROP TABLE IF EXISTS `app_heart`;
 CREATE TABLE `app_heart` (
   `heartId` int(11) NOT NULL,
   `time` varchar(255) NOT NULL,
-  `fre` int(11) NOT NULL,
+  `fre` int(11) DEFAULT NULL,
   `id` int(11) NOT NULL,
+  `highPre` int(11) DEFAULT NULL,
+  `lowPre` int(11) DEFAULT NULL,
   PRIMARY KEY (`heartId`),
   KEY `FK6D30F0A8C23FDE4` (`id`),
   CONSTRAINT `FK6D30F0A8C23FDE4` FOREIGN KEY (`id`) REFERENCES `app_user` (`id`)
@@ -3573,9 +3575,10 @@ CREATE TABLE `app_heart` (
 -- ----------------------------
 -- Records of app_heart
 -- ----------------------------
-INSERT INTO `app_heart` VALUES ('0', '20170713080000', '82', '1');
-INSERT INTO `app_heart` VALUES ('1', '20170413080000', '70', '1');
-INSERT INTO `app_heart` VALUES ('2', '20170313080000', '85', '1');
+INSERT INTO `app_heart` VALUES ('0', '20170713080000', '82', '1', '0', '0');
+INSERT INTO `app_heart` VALUES ('1', '20170413080000', '70', '1', '0', '0');
+INSERT INTO `app_heart` VALUES ('2', '20170313080000', '85', '1', '0', '0');
+INSERT INTO `app_heart` VALUES ('3', '20170212080000', '60', '1', '0', '0');
 
 -- ----------------------------
 -- Table structure for app_position
