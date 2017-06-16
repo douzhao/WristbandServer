@@ -10,6 +10,9 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-easyui-1.3.5/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/script/extends.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/script/common.js"></script>
+     <script type="text/javascript" src="${pageContext.request.contextPath}/script/ichartjs/ichartjs.base.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/script/ichartjs/ichart.coordinate.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/script/ichartjs/ichartjs.line.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/default.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/script/jquery-easyui-1.3.5/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/script/jquery-easyui-1.3.5/themes/icon.css" />

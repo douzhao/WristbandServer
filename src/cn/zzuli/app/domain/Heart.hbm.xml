@@ -11,7 +11,9 @@
         	<generator class="native" />
         </id>
         <property name="time" type="string" not-null="true" />
-        <property name="fre" type="integer" not-null="true" />
+        <property name="fre" type="integer" />
+        <property name="highPre" type="integer" />
+        <property name="lowPre" type="integer" />
         
         <!-- user属性，本类与User的多对一关系 -->
         <many-to-one name="user" class="User" column="id"></many-to-one>

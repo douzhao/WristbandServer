@@ -270,6 +270,10 @@ function heartRateData(){
 	if($("#tabs").tabs("getTab",title)){
 		$("#tabs").tabs("close",title);
 	}
+	
+	
+	
+	
 	var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';    
 	$('#tabs').tabs('add',{    
 	       title:title,    

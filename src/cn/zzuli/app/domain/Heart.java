@@ -5,6 +5,8 @@ private int heartId;
 private String  time;
 private int fre;
 private User user;
+private int highPre;
+private int lowPre;
 
 public int getHeartId() {
 	return heartId;
@@ -29,5 +31,17 @@ public User getUser() {
 }
 public void setUser(User user) {
 	this.user = user;
+}
+public int getHighPre() {
+	return highPre;
+}
+public void setHighPre(int highPre) {
+	this.highPre = highPre;
+}
+public int getLowPre() {
+	return lowPre;
+}
+public void setLowPre(int lowPre) {
+	this.lowPre = lowPre;
 }
 }

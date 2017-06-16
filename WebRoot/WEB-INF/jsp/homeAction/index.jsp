@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         	 <div data-options="iconCls:'icon-health'" title="健康数据">
                 <div class="easyui-panel" fit="true" border="false">
                     <ul class="easyui-tree">
-                        <li><a href="javascript:remo();" icon="tu1201">心脉</a></li>
+                        <li><a href="javascript:heartRateData();" icon="tu1201">心脉</a></li>
                         <li><a href="#" icon="tu1201">血压</a></li>
                         <li><a href="javascript:remo();" icon="tu1201">徒步</a></li>
                     </ul>
